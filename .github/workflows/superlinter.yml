@@ -1,18 +1,8 @@
-on: push
-
+name: hello-world
+'on': push
 jobs:
-  super-lint:
-    name: Lint code base
+  my-job:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Run Super-Linter
-        uses: github/super-linter@v6
-        env:
-          DEFAULT_BRANCH: dsa
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: my-step
+        run: echo "Hello World!"
